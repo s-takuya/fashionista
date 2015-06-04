@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(version: 20150604000139) do
 
   create_table "coordinates", force: :cascade do |t|
-    t.string   "person_name", null: false
-    t.string   "occupation",  null: false
-    t.string   "season",      null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "person_name",  null: false
+    t.string   "occupation",   null: false
+    t.string   "dress_season", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
