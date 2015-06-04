@@ -8,6 +8,7 @@ end
 source 'https://rubygems.org' do
   gem 'coffee-rails', '4.1.0'
   gem 'jbuilder',     '2.2.12'
+  gem 'paperclip',    '4.2.1'
   gem 'pg',           '0.18.1'
   gem 'rails',        '4.2.1'
   gem 'sass-rails',   '5.0.3'
