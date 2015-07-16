@@ -1,0 +1,6 @@
+<%= @coordinate.person_name %>
+<% @coordinate.photos.each do |photo| %>
+  <%= image_tag photo.image.url %>
+<% end %>
+<%= @coordinate.dress_season %>
+<%= @coordinate.occupation %>
