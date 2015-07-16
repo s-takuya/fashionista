@@ -1,0 +1,9 @@
+<% @coordinates.each do |coordinate| %>
+  <%= link_to coordinate do %>
+    <% coordinate.photos.each do |photo| %>
+      <%= image_tag photo.image.url %>
+    <% end %>
+    <span><%= coordinate.person_name %><span>
+    <span><%= coordinate.dress_season %></span>
+  <% end %>
+<% end %>
