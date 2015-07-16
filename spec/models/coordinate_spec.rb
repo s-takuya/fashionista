@@ -6,7 +6,6 @@ RSpec.describe Coordinate do
   it { is_expected.to respond_to(:person_name) }
   it { is_expected.to respond_to(:occupation) }
   it { is_expected.to respond_to(:dress_season) }
-  it { is_expected.to respond_to(:image) }
   it { is_expected.to be_valid }
 
   describe 'person name' do
@@ -65,17 +64,6 @@ RSpec.describe Coordinate do
       it 'has an error on person name' do
         expect(coordinate).not_to be_valid
         expect(coordinate.errors[:dress_season].size).to eq(1)
-      end
-    end
-  end
-
-  describe 'image' do
-    context 'when it is nil' do
-      before { coordinate.image = nil }
-
-      it 'has an error on image' do
-        expect(coordinate).not_to be_valid
-        expect(coordinate.errors[:image].size).to eq(1)
       end
     end
   end
