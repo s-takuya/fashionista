@@ -1,9 +1,17 @@
 <% @coordinates.each do |coordinate| %>
   <%= link_to coordinate do %>
-    <% coordinate.photos.each do |photo| %>
-      <%= image_tag photo.image.url %>
-    <% end %>
-    <span><%= coordinate.person_name %><span>
-    <span><%= coordinate.dress_season %></span>
+    <div class='coordinate_list'>
+      <div class='list_body'>
+        <% coordinate.photos.each do |photo| %>
+          <%= image_tag photo.image.url, class: 'coordinate_image' %>
+        <% end %>
+        <div class='name'>
+          <%= coordinate.person_name %>
+        </div>
+        <div class='season'>
+          dress_season: <%= coordinate.dress_season %>
+        </div>
+      </div>
+    </div>
   <% end %>
 <% end %>
