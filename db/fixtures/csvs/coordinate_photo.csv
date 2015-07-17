@@ -1,2 +1,3 @@
 id,coordinate_imageable_id,image
 1,1,db/fixtures/images/beckham/beckham.jpg
+2,2,db/fixtures/images/justinbieber/justinbieber_summer.jpg
