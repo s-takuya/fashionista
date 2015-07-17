@@ -3,18 +3,21 @@ ruby '2.2.2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery',     '2.1.3'
   gem 'rails-assets-jquery-ujs', '1.0.3'
+  gem 'rails-assets-underscore', '1.8.3'
+  gem 'rails-assets-bootstrap',  '3.3.4'
 end
 
 source 'https://rubygems.org' do
-  gem 'coffee-rails', '4.1.0'
-  gem 'jbuilder',     '2.2.12'
-  gem 'paperclip',    '4.2.1'
-  gem 'pg',           '0.18.1'
-  gem 'rails',        '4.2.1'
-  gem 'sass-rails',   '5.0.3'
-  gem 'seed-fu',      '2.3.5'
-  gem 'sqlite3',      '1.3.10'
-  gem 'uglifier',     '2.7.1'
+  gem 'coffee-rails',       '4.1.0'
+  gem 'font-awesome-rails', '4.3.0.0'
+  gem 'jbuilder',           '2.2.12'
+  gem 'paperclip',          '4.2.1'
+  gem 'pg',                 '0.18.1'
+  gem 'rails',              '4.2.1'
+  gem 'sass-rails',         '5.0.3'
+  gem 'seed-fu',            '2.3.5'
+  gem 'sqlite3',            '1.3.10'
+  gem 'uglifier',           '2.7.1'
 
   group :development, :test do
     gem 'pry-byebug',  '3.1.0'
