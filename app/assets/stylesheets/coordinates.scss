@@ -1,3 +1,63 @@
 // Place all the styles related to the Coordinates controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap';
+@import 'font-awesome';
+
+.coordinate_list {
+  text-align: center;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+
+  .list_body {
+    font-size: 14px;
+    padding: 0;
+    height: 330px;
+    line-height: 60px;
+    overflow: hidden;
+
+    a {
+      display: block;
+    }
+  }
+
+  .coordinate_image {
+    border-radius: 3px;
+    width: 130px;
+    margin-right: 10px;
+  }
+}
+
+.name {
+  font-size: 24px;
+  color: black;
+}
+
+.season {
+  font-size: 16px;
+  color: black;
+}
+
+.image {
+  img {
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
+
+.person_name {
+  color: black;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.dress_season {
+  font-size: 14px;
+}
+
+.occupation {
+  font-size: 14px;
+}

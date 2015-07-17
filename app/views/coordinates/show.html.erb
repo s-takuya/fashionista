@@ -1,6 +1,17 @@
-<%= @coordinate.person_name %>
-<% @coordinate.photos.each do |photo| %>
-  <%= image_tag photo.image.url %>
-<% end %>
-<%= @coordinate.dress_season %>
-<%= @coordinate.occupation %>
+<div class='person_name text-center'>
+  <%= @coordinate.person_name %>
+</div>
+<div class='image'>
+  <% @coordinate.photos.each do |photo| %>
+    <%= image_tag photo.image.url, class: 'img-responsive' %>
+  <% end %>
+</div>
+<hr>
+<div class='dress_season text-center'>
+  dress_season: <%= @coordinate.dress_season %>
+</div>
+<hr>
+<div class='occupation text-center'>
+  occupation: <%= @coordinate.occupation %>
+</div>
+<hr>
