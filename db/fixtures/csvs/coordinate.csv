@@ -1,3 +1,6 @@
-id,person_name,dress_season,occupation,
+id,person_name,dress_season,occupation
 1,Beckham,summer,former soccer player
 2,Justin Bieber,summer,musician
+3,David Gandy,summer、spring,fashion model
+4,David Gandy,summer,fashion model
+5,David Gandy,spring、fall,fashion model
