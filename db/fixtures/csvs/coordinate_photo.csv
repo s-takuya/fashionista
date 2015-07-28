@@ -1,3 +1,6 @@
 id,coordinate_imageable_id,image
 1,1,db/fixtures/images/beckham/beckham.jpg
 2,2,db/fixtures/images/justinbieber/justinbieber_summer.jpg
+3,3,db/fixtures/images/david_gandy/david_gandy1.jpg
+4,4,db/fixtures/images/david_gandy/david_gandy2.jpg
+5,5,db/fixtures/images/david_gandy/david_gandy3.jpg
