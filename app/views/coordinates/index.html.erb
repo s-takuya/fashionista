@@ -1,3 +1,16 @@
+<header class='navbar text-center'>
+  <div class='form-group'>
+    <%= search_form_for @search do |f| %>
+      <%= f.label :person_name_cont, 'person name' %>
+      <%= f.text_field :person_name_cont %>
+
+      <%= f.label :dress_season_cont, 'season' %>
+      <%= f.text_field :dress_season_cont %>
+      <%= f.submit '検索する', class: 'btn btn-default' %>
+    <% end %>
+  </div>
+</header>
+
 <% @coordinates.each do |coordinate| %>
   <%= link_to coordinate do %>
     <div class='coordinate_list'>

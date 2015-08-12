@@ -14,6 +14,7 @@ source 'https://rubygems.org' do
   gem 'paperclip',          '4.2.1'
   gem 'pg',                 '0.18.1'
   gem 'rails',              '4.2.1'
+  gem 'ransack',            '1.6.6'
   gem 'sass-rails',         '5.0.3'
   gem 'seed-fu',            '2.3.5'
   gem 'sqlite3',            '1.3.10'
