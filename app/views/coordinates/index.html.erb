@@ -2,10 +2,10 @@
   <div class='form-group'>
     <%= search_form_for @search do |f| %>
       <%= f.label :person_name_cont, 'person name' %>
-      <%= f.collection_select(:person_name_eq, Coordinate.select(:person_name).uniq, :person_name, :person_name) %>
+      <%= f.collection_select(:person_name_eq, Coordinate.select(:person_name).uniq, :person_name, :person_name, include_blank: '選択しない') %>
 
       <%= f.label :dress_season_cont, 'season' %>
-      <%= f.collection_select(:dress_season_eq, Coordinate.select(:dress_season).uniq, :dress_season, :dress_season) %>
+      <%= f.collection_select(:dress_season_eq, Coordinate.select(:dress_season).uniq, :dress_season, :dress_season, include_blank: '選択しない') %>
       <%= f.submit '検索する', class: 'btn btn-default' %>
     <% end %>
   </div>
