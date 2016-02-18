@@ -22,6 +22,12 @@ class CoordinatesController < ApplicationController
     end
   end
 
+  def destroy
+    @coordinate = Coordinate.find(params[:id])
+    @coordinate.delete
+    redirect_to @coordinate
+  end
+
   private
 
   def coordinate_params
