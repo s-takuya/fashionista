@@ -1,8 +1,8 @@
 <header class='navbar text-center'>
   <div class='form-group'>
     <%= search_form_for @search do |f| %>
-      <%= f.collection_select(:person_name_eq, Coordinate.select(:person_name).uniq, :person_name, :person_name) %>
-      <%= f.collection_select(:dress_season_eq, Coordinate.select(:dress_season).uniq, :dress_season, :dress_season) %>
+      <%= f.collection_select(:person_name_eq, Coordinate.select(:person_name).uniq, :person_name, :person_name, include_blank: 'person') %>
+      <%= f.collection_select(:dress_season_eq, Coordinate.select(:dress_season).uniq, :dress_season, :dress_season, include_blank: 'season') %>
       <%= button_tag type: 'submit', class: 'btn btn-default' do %>
         <i class='fa fa-search'></i>
       <% end %>

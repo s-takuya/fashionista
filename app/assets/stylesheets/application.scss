@@ -15,13 +15,12 @@
  *= require font-awesome
  *= require_self
  */
-
- h3 {
-   color: black;
- }
-
  @import 'bootstrap';
  @import 'font-awesome';
+
+ a {
+   color: #696969;
+ }
 
  hr {
    width: 50%;
