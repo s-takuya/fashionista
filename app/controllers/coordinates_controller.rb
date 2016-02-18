@@ -1,7 +1,7 @@
 class CoordinatesController < ApplicationController
   def index
     @search = Coordinate.ransack(params[:q])
-    @coordinates = @search.result(distinct: true)
+    @coordinates = @search.result(distinct: true).order(id: :desc)
   end
 
   def show
