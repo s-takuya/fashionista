@@ -20,7 +20,6 @@ source 'https://rubygems.org' do
   gem 'ransack',            '1.6.6'
   gem 'sass-rails',         '5.0.3'
   gem 'seed-fu',            '2.3.5'
-  gem 'sqlite3',            '1.3.10'
   gem 'uglifier',           '2.7.1'
 
   group :development, :test do
