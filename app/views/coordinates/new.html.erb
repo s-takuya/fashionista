@@ -1,0 +1,39 @@
+<h2 class='header_title'><%= t('.title') %></h2>
+
+<%= form_for @coordinate do |f| %>
+  <% if @coordinate.errors.any? %>
+    <div id='error_explanation'>
+      <ul>
+      <% @coordinate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :photos do |ph| %>
+    <div class='form-group post_image'>
+      <i class='fa fa-camera'></i><%= ph.label :image, t('.select_photo') %>
+      <%= ph.file_field :image %>
+    </div>
+  <% end %>
+
+  <div class='form-group'>
+    <%= f.label :person_name, 'person_name' %>
+    <%= f.text_field :person_name, class: 'form-control' %>
+  </div>
+
+  <div class='form-group dress_season'>
+    <%= f.label :dress_season, 'dress_season' %>
+    <%= f.text_field :dress_season, class: 'form-control' %>
+  </div>
+
+  <div class='form-group dress_season'>
+    <%= f.label :occupation, 'occupation' %>
+    <%= f.text_area :occupation, class: 'form-control' %>
+  </div>
+
+  <div class='form-group actions submit text-center'>
+    <%= f.submit 'Post', class: 'btn btn-default' %>
+  </div>
+<% end %>
