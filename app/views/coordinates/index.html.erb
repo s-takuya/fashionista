@@ -1,4 +1,4 @@
-<header class='navbar text-center'>
+<header class='search_form text-center'>
   <div class='form-group'>
     <%= search_form_for @search do |f| %>
       <%= f.collection_select(:person_name_eq, Coordinate.select(:person_name).uniq, :person_name, :person_name, include_blank: 'person') %>
