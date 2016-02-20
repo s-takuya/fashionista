@@ -5,12 +5,28 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
+.sign_in_link {
+  margin-top: -107px;
+  margin-right: -220px;
+
+  .btn {
+    color: #00ab6b;
+    border-color: #00ab6b;
+  }
+}
+
 .search_form {
   margin-top: -65px;
 }
 
 .post {
-  padding-bottom: 25px;
+  margin-top: 45px;
+  padding-bottom: 22px;
+
+  .btn {
+    color: #02b875;
+    border-color: #02b875;
+  }
 }
 
 .coordinate_list {
