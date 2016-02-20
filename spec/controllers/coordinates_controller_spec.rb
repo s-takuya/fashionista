@@ -3,11 +3,10 @@ require 'rails_helper'
 RSpec.describe CoordinatesController do
   describe 'GET index' do
     let(:beckham) { FactoryGirl.create(:coordinate) }
-    let(:carmelo) { FactoryGirl.create(:coordinate, person_name: 'carmelo') }
 
     it 'assigns instance variable' do
       get :index
-      expect(assigns(:coordinates)).to eq [beckham, carmelo]
+      expect(assigns(:coordinates)).to contain_exactly(beckham)
     end
 
     it 'renders the index template' do
