@@ -18,6 +18,19 @@
  @import 'bootstrap';
  @import 'font-awesome';
 
+ h2 {
+   font-size: 16px;
+   color: rgba(0,0,0,.6);
+ }
+
+ .shared_links {
+   padding-top: 6px;
+
+   .btn {
+     margin-top: 8px;
+   }
+ }
+
 
  .submit {
    .btn {
