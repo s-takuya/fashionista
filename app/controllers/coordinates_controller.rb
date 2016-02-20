@@ -1,4 +1,6 @@
 class CoordinatesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+  
   def index
     @search = Coordinate.ransack(params[:q])
     @coordinates = @search.result(distinct: true).order(id: :desc)
