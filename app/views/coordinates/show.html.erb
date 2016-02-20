@@ -1,21 +1,23 @@
-<div class='person_name text-center'>
-  <%= @coordinate.person_name %>
-</div>
-<div class='image'>
-  <% @coordinate.photos.each do |photo| %>
-    <%= image_tag photo.image.url, class: 'img-responsive' %>
-  <% end %>
-</div>
-<hr>
-<div class='dress_season text-center'>
-  dress_season: <%= @coordinate.dress_season %>
-</div>
-<hr>
-<div class='occupation text-center'>
-  occupation: <%= @coordinate.occupation %>
-</div>
-<hr>
+<div class='coordinate'>
+  <div class='person_name text-center'>
+    <%= @coordinate.person_name %>
+  </div>
+  <div class='image'>
+    <% @coordinate.photos.each do |photo| %>
+      <%= image_tag photo.image.url, class: 'img-responsive' %>
+    <% end %>
+  </div>
+  <hr>
+  <div class='dress_season text-center'>
+    dress_season: <%= @coordinate.dress_season %>
+  </div>
+  <hr>
+  <div class='occupation text-center'>
+    occupation: <%= @coordinate.occupation %>
+  </div>
+  <hr>
 
-<div class='text-center'>
-  <%= link_to 'Delete', coordinate_path, method: :delete, class: 'btn btn-default' %>
+  <div class='text-center'>
+    <%= link_to 'Delete', coordinate_path, method: :delete, class: 'btn btn-default' %>
+  </div>
 </div>
