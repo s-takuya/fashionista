@@ -8,7 +8,7 @@ source 'https://rails-assets.org' do
 end
 
 source 'https://rubygems.org' do
-  gem 'aws-sdk',            '2.2.18'
+  gem 'aws-sdk',            '< 2.0'
   gem 'coffee-rails',       '4.1.0'
   gem 'font-awesome-rails', '4.3.0.0'
   gem 'devise',             '3.5.6'
