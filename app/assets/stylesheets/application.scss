@@ -18,6 +18,14 @@
  @import 'bootstrap';
  @import 'font-awesome';
 
+
+ .submit {
+   .btn {
+     color: #02b875;
+     border-color: #02b875;
+   }
+ }
+
  .btn {
    border-radius: 999em;
    border-color: #696969;
