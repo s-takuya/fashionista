@@ -24,4 +24,8 @@
       </div>
     <% end %>
   <% end %>
+
+  <div class='show_more text-center'>
+    <%= link_to 'Show more', show_more_coordinates_path(person_name: @coordinate.person_name), class: 'btn btn-default' %>
+  </div>
 </div>

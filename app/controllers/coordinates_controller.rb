@@ -1,6 +1,6 @@
 class CoordinatesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  
+
   def index
     @search = Coordinate.ransack(params[:q])
     @coordinates = @search.result(distinct: true).order(id: :desc)
@@ -8,11 +8,16 @@ class CoordinatesController < ApplicationController
 
   def show
     @coordinate = Coordinate.find(params[:id])
+    @associated_coordinates = Coordinate.where(person_name: @coordinate.person_name)
   end
 
   def new
     @coordinate = Coordinate.new
     @coordinate.photos.build
+  end
+
+  def show_more
+    @coordinates = Coordinate.where(person_name: params[:person_name])
   end
 
   def create
