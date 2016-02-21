@@ -14,6 +14,7 @@ source 'https://rubygems.org' do
   gem 'font-awesome-rails', '4.3.0.0'
   gem 'devise',             '3.5.6'
   gem 'jbuilder',           '2.2.12'
+  gem 'meta-tags',          '2.1.0'
   gem 'omniauth',           '1.3.1'
   gem 'omniauth-facebook',  '3.0.0'
   gem 'paperclip',          '4.2.1'
