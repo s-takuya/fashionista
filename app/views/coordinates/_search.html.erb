@@ -1,5 +1,7 @@
 <%= form_tag coordinates_path, method: :get do %>
   <%= select_tag :owner_id, options_from_collection_for_select(Owner.all, :id, :name, params[:owner_id]), { include_blank: 'people' } %>
   <%= select_tag :dress_season, options_from_collection_for_select(Coordinate.all.to_a.uniq { |o| o.dress_season }, :dress_season, :dress_season, params[:dress_season]), { include_blank: 'season' } %>
-  <%= submit_tag 'search', class: 'btn btn-default' %>
+  <%= button_tag type: 'submit', class: 'btn btn-default' do %>
+    <i class='fa fa-search'></i>
+  <% end %>
 <% end %>
