@@ -5,6 +5,30 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
+.favorite_button {
+  margin-top: 10px;
+
+  .btn {
+    a {
+      color: #02b875;
+    }
+
+    border-color: #02b875;
+  }
+}
+
+.unfavorite_button {
+  margin-top: 10px;
+
+  .btn {
+    a {
+      color: #02b875;
+    }
+    
+    border-color: #02b875;
+  }
+}
+
 .sign_in_link {
   margin-top: -34px;
   margin-left: 195px;

@@ -7,6 +7,18 @@
       <%= image_tag photo.image.url, class: 'img-responsive' %>
     <% end %>
   </div>
+
+  <% if current_user %>
+    <% if current_user.voted_up_on? @coordinate %>
+      <%= render 'remove_from_favorites' %>
+    <% else %>
+      <%= render 'add_to_favorites' %>
+    <% end %>
+  <% else %>
+    <div class='not_login'>
+      <%= render 'add_to_favorites' %>
+    </div>
+  <% end %>
   <hr>
   <div class='dress_season text-center'>
     dress_season: <%= @coordinate.dress_season %>

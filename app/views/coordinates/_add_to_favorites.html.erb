@@ -1,0 +1,8 @@
+<div class='favorite_button text-center'>
+  <div class='btn btn-default'>
+    <%= link_to 'Favorite', favorites_path(coordinate_id: @coordinate.id), method: :post, remote: true %>
+  </div>
+</div>
+
+<div id='favorite_result'>
+</div>

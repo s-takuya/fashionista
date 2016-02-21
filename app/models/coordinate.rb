@@ -6,6 +6,8 @@ class Coordinate < ActiveRecord::Base
 
   accepts_nested_attributes_for :photos
 
+  acts_as_votable
+
   def self.search(owner_id, dress_season)
     where('owner_id = ? AND dress_season = ?', owner_id.to_i, "#{dress_season}")
   end

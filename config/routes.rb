@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :coordinates
 
   resources :owners
+  resources :favorites do
+    post :remove, on: :collection
+  end
 end

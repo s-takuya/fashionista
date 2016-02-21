@@ -1,0 +1,8 @@
+<div class='unfavorite_button text-center'>
+  <div class='btn btn-default'>
+    <%= link_to 'Unfavorite', remove_favorites_path(coordinate_id: @coordinate.id), method: :post, remote: true %>
+  </div>
+</div>
+
+<div id='unfavorite_result'>
+</div>
