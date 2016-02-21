@@ -27,6 +27,7 @@ source 'https://rubygems.org' do
     gem 'pry-byebug',  '3.1.0'
     gem 'pry-rails',   '0.3.4'
     gem 'rspec-rails', '3.2.1'
+    gem 'sqlite3'
   end
 
   group :development do
