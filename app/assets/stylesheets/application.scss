@@ -18,10 +18,6 @@
  @import 'bootstrap';
  @import 'font-awesome';
 
- .logo {
-   margin-left: -155px;
- }
-
  .no_favorites {
    font-size: 16px;
    color: rgba(0,0,0,.6);
@@ -37,7 +33,7 @@
 
  .user_favorites {
    margin-top: -35px;
-   margin-left: 20px;
+   margin-right: 22px;
    margin-bottom: 12px;
    .btn {
      color: #00ab6b;
@@ -47,7 +43,7 @@
 
  .sign_in_link {
    margin-top: -35px;
-   margin-left: 135px;
+   margin-left: 195px;
    margin-bottom: 12px;
    .btn {
      color: #00ab6b;
