@@ -1,23 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe CoordinatesController do
+  let!(:coordinate) { FactoryGirl.create(:coordinate, owner: owner) }
+  let!(:owner) { FactoryGirl.create(:owner) }
+
   describe 'GET index' do
-    let(:beckham) { FactoryGirl.create(:coordinate) }
-
     it 'assigns instance variable' do
-      get :index
-      expect(assigns(:coordinates)).to contain_exactly(beckham)
-    end
-
-    it 'renders the index template' do
-      get :index
-      expect(response).to render_template(:index)
+      get :index, owner_id: owner.id, dress_season: '夏'
+      expect(assigns(:coordinates)).to contain_exactly(coordinate)
     end
   end
 
   describe 'GET show' do
-    let(:coordinate) { FactoryGirl.create(:coordinate) }
-
     it 'assigns instance variable' do
       get :show, id: coordinate.id
       expect(assigns(:coordinate)).to eq coordinate
