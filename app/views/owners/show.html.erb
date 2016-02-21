@@ -1,14 +1,11 @@
-<div class='show_more_coordinates'>
+<div class='owner_coordinates'>
   <% @coordinates.each do |coordinate| %>
     <%= link_to coordinate do %>
-      <div class='coordinate_list'>
+      <div class='list'>
         <div class='list_body'>
           <% coordinate.photos.each do |photo| %>
             <%= image_tag photo.image.url, class: 'coordinate_image' %>
           <% end %>
-          <div class='name'>
-            <%= coordinate.person_name %>
-          </div>
           <div class='season'>
             dress_season: <%= coordinate.dress_season %>
           </div>

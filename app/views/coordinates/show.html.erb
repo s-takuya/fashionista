@@ -1,6 +1,6 @@
 <div class='coordinate'>
   <div class='person_name text-center'>
-    <%= @coordinate.person_name %>
+    <%= @coordinate.owner.name %>
   </div>
   <div class='image'>
     <% @coordinate.photos.each do |photo| %>
@@ -13,7 +13,7 @@
   </div>
   <hr>
   <div class='occupation text-center'>
-    occupation: <%= @coordinate.occupation %>
+    occupation: <%= @coordinate.owner.occupation %>
   </div>
   <hr>
 
@@ -26,6 +26,6 @@
   <% end %>
 
   <div class='show_more text-center'>
-    <%= link_to 'Show more', show_more_coordinates_path(person_name: @coordinate.person_name), class: 'btn btn-default' %>
+    <%= link_to 'Show more', owner_path(id: @coordinate.owner), class: 'btn btn-default' %>
   </div>
 </div>

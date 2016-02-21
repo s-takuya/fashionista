@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218155748) do
+ActiveRecord::Schema.define(version: 20160220134614) do
 
   create_table "coordinates", force: :cascade do |t|
-    t.string   "person_name",        null: false
-    t.string   "occupation",         null: false
     t.string   "dress_season",       null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -23,6 +21,16 @@ ActiveRecord::Schema.define(version: 20160218155748) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "owner_id"
+  end
+
+  add_index "coordinates", ["owner_id"], name: "index_coordinates_on_owner_id"
+
+  create_table "owners", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "occupation", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|

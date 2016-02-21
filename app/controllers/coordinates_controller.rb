@@ -2,13 +2,11 @@ class CoordinatesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @search = Coordinate.ransack(params[:q])
-    @coordinates = @search.result(distinct: true).order(id: :desc)
+    @coordinates = Coordinate.search(params[:owner_id], params[:dress_season])
   end
 
   def show
     @coordinate = Coordinate.find(params[:id])
-    @associated_coordinates = Coordinate.where(person_name: @coordinate.person_name)
   end
 
   def new
@@ -16,13 +14,16 @@ class CoordinatesController < ApplicationController
     @coordinate.photos.build
   end
 
-  def show_more
-    @coordinates = Coordinate.where(person_name: params[:person_name])
-  end
-
   def create
     @coordinate = Coordinate.new(coordinate_params)
     if @coordinate.save
+      if Owner.where(name: params[:coordinate][:owner][:name]).present?
+        owner = Owner.where(name: params[:coordinate][:owner][:name]).first
+        @coordinate.update(owner_id: owner.id)
+      else
+        new_owner = Owner.create(name: params[:coordinate][:owner][:name], occupation: params[:coordinate][:owner][:occupation])
+        @coordinate.update(owner_id: new_owner.id)
+      end
       redirect_to @coordinate
     else
       render :new
@@ -38,6 +39,6 @@ class CoordinatesController < ApplicationController
   private
 
   def coordinate_params
-    params.require(:coordinate).permit(:person_name, :dress_season, :occupation, photos_attributes: :image)
+    params.require(:coordinate).permit(:dress_season, photos_attributes: :image)
   end
 end

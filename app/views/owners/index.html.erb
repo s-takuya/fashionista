@@ -1,0 +1,24 @@
+<div class='search_form text-center'>
+  <%= render 'coordinates/search' %>
+</div>
+
+<div class='post text-center'>
+  <%= link_to 'Post Corde', new_coordinate_path, class: 'btn btn-default' %>
+</div>
+
+<div class='owner_list'>
+  <% @owners.each do |owner| %>
+    <%= link_to owner do %>
+      <div class='list'>
+        <div class='list_body'>
+          <% owner.coordinates.first.photos.each do |photo| %>
+            <%= image_tag photo.image.url, class: 'coordinate_image' %>
+          <% end %>
+          <div class='name'>
+            <%= owner.name %>'s corde
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

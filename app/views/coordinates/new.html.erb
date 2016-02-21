@@ -16,19 +16,21 @@
     </div>
   <% end %>
 
-  <div class='form-group'>
-    <%= f.label :person_name, 'person_name' %>
-    <%= f.text_field :person_name, class: 'form-control' %>
-  </div>
+  <%= f.fields_for :owner do |person| %>
+    <div class='form-group'>
+      <%= person.label :name, 'person_name' %>
+      <%= person.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class='form-group'>
+      <%= person.label :occupation, 'occupation' %>
+      <%= person.text_field :occupation, class: 'form-control' %>
+    </div>
+  <% end %>
 
   <div class='form-group'>
     <%= f.label :dress_season, 'dress_season' %>
     <%= f.text_field :dress_season, class: 'form-control' %>
-  </div>
-
-  <div class='form-group'>
-    <%= f.label :occupation, 'occupation' %>
-    <%= f.text_field :occupation, class: 'form-control' %>
   </div>
 
   <div class='form-group actions submit text-center'>
