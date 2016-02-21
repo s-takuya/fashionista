@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'coordinates#index'
+  root 'owners#index'
 
-  resources :coordinates do
-    get :show_more, on: :collection
-  end
+  resources :coordinates
+
+  resources :owners
 end
