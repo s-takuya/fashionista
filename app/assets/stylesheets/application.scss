@@ -19,7 +19,7 @@
  @import 'font-awesome';
 
  .logo {
-   margin-left: -188px;
+   margin-left: -168px;
  }
 
  .no_favorites {
@@ -36,8 +36,8 @@
  }
 
  .user_favorites {
-   margin-top: -34px;
-   margin-left: 10px;
+   margin-top: -35px;
+   margin-left: 5px;
    margin-bottom: 12px;
    .btn {
      color: #00ab6b;
@@ -46,6 +46,16 @@
  }
 
  .sign_in_link {
+   margin-top: -35px;
+   margin-left: 135px;
+   margin-bottom: 12px;
+   .btn {
+     color: #00ab6b;
+     border-color: #00ab6b;
+   }
+ }
+
+ .logout_link {
    margin-top: -46px;
    margin-left: 195px;
    margin-bottom: 12px;
