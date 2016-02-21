@@ -15,7 +15,7 @@
     <%= link_to owner do %>
       <div class='list'>
         <div class='list_body'>
-          <% owner.coordinates.first.photos.each do |photo| %>
+          <% owner.coordinates.shuffle.first.photos.each do |photo| %>
             <%= image_tag photo.image.url, class: 'coordinate_image' %>
           <% end %>
           <div class='name'>
