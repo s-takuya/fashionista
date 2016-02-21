@@ -11,8 +11,14 @@
   <header>
     <nav class='navbar navbar-custom'>
       <div>
-        <h3 class='text-center text-muted'><%= link_to 'Styly', root_path %></h3>
+        <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
       </div>
+
+      <% if user_signed_in? %>
+        <div class='user_favorites text-center'>
+          <%= link_to 'Favorites', favorites_path, class: 'btn btn-default' %>
+        </div>
+      <% end %>
 
       <div class='sign_in_link text-center'>
         <% if user_signed_in? %>

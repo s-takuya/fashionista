@@ -18,6 +18,30 @@
  @import 'bootstrap';
  @import 'font-awesome';
 
+ .logo {
+   margin-left: -188px;
+ }
+
+ .user_favorites {
+   margin-top: -34px;
+   margin-left: 10px;
+   margin-bottom: 12px;
+   .btn {
+     color: #00ab6b;
+     border-color: #00ab6b;
+   }
+ }
+
+ .sign_in_link {
+   margin-top: -46px;
+   margin-left: 195px;
+   margin-bottom: 12px;
+   .btn {
+     color: #00ab6b;
+     border-color: #00ab6b;
+   }
+ }
+
  h2 {
    font-size: 16px;
    color: rgba(0,0,0,.6);
