@@ -23,6 +23,7 @@ source 'https://rubygems.org' do
   gem 'ransack',            '1.6.6'
   gem 'sass-rails',         '5.0.3'
   gem 'seed-fu',            '2.3.5'
+  gem 'sitemap_generator',  '5.1.0'
   gem 'uglifier',           '2.7.1'
 
   group :development, :test do

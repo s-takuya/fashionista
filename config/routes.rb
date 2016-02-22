@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :favorites do
     post :remove, on: :collection
   end
+  get '/sitemap' => redirect('https://s3-ap-northeast-1.amazonaws.com/styly/sitemaps/sitemap.xml.gz')
 end
