@@ -3,7 +3,7 @@
 </div>
 
 <% if current_user %>
-  <% if current_user.email == 'takuyashiratake0622@icloud.com' %>
+  <% if current_user.email == 'takuyashiratake0622@icloud.com' || current_user.email == 'awesome_95@icloud.com' %>
     <div class='post text-center'>
       <%= link_to 'Post Corde', new_coordinate_path, class: 'btn btn-default' %>
     </div>
