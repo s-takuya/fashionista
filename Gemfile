@@ -13,6 +13,7 @@ source 'https://rubygems.org' do
   gem 'coffee-rails',       '4.1.0'
   gem 'font-awesome-rails', '4.3.0.0'
   gem 'devise',             '3.5.6'
+  gem 'fog-aws',            '0.8.0'
   gem 'jbuilder',           '2.2.12'
   gem 'meta-tags',          '2.1.0'
   gem 'omniauth',           '1.3.1'
