@@ -8,7 +8,7 @@ class Coordinate < ActiveRecord::Base
 
   acts_as_votable
 
-  def self.search(owner_id, dress_season)
-    where('owner_id = ? AND dress_season = ?', owner_id.to_i, "#{dress_season}")
+  def self.search(owner_id)
+    where(owner_id: owner_id.to_i)
   end
 end

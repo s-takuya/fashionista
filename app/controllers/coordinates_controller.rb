@@ -2,7 +2,7 @@ class CoordinatesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @coordinates = Coordinate.search(params[:owner_id], params[:dress_season])
+    @coordinates = Coordinate.search(params[:owner_id])
   end
 
   def show
