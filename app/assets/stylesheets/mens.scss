@@ -1,0 +1,14 @@
+@import 'bootstrap';
+@import 'font-awesome';
+
+.man_button {
+  position: absolute;
+  left: 60px;
+  top: 20px;
+
+  .btn {
+    color: #00ab6b;
+    border-color: #00ab6b;
+    background: #f7f3e8;
+  }
+}

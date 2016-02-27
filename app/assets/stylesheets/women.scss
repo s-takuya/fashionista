@@ -1,0 +1,14 @@
+@import 'bootstrap';
+@import 'font-awesome';
+
+.woman_button {
+  position: absolute;
+  left: 55px;
+  top: 23px;
+
+  .btn {
+    color: #e368d6;
+    border-color: #e368d6;
+    background: #f7f3e8;
+  }
+}

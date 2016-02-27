@@ -21,7 +21,11 @@ class CoordinatesController < ApplicationController
         owner = Owner.where(name: params[:coordinate][:owner][:name]).first
         @coordinate.update(owner_id: owner.id)
       else
-        new_owner = Owner.create(name: params[:coordinate][:owner][:name], occupation: params[:coordinate][:owner][:occupation])
+        if params[:coordinate][:owner][:man_flag].present?
+          new_owner = Owner.create(name: params[:coordinate][:owner][:name], occupation: params[:coordinate][:owner][:occupation], man_flag: true)
+        else
+          new_owner = Owner.create(name: params[:coordinate][:owner][:name], occupation: params[:coordinate][:owner][:occupation], woman_flag: true)
+        end
         @coordinate.update(owner_id: new_owner.id)
       end
       redirect_to @coordinate

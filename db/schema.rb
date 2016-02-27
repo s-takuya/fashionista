@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221050425) do
+ActiveRecord::Schema.define(version: 20160227075303) do
 
   create_table "coordinates", force: :cascade do |t|
     t.string   "dress_season",       null: false
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20160221050425) do
     t.string   "occupation", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "man_flag"
+    t.boolean  "woman_flag"
   end
 
   create_table "photos", force: :cascade do |t|

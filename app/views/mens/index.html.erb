@@ -1,0 +1,32 @@
+<header class='woman_button'>
+  <%= link_to 'Woman', women_path, class: 'btn btn-default' %>
+</header>
+
+<div class='search_form text-center'>
+  <%= render 'coordinates/search' %>
+</div>
+
+<% if current_user %>
+  <% if current_user.email == 'takuyashiratake0622@icloud.com' || current_user.email == 'awesome_95@icloud.com' %>
+    <div class='post text-center'>
+      <%= link_to 'Post Corde', new_coordinate_path, class: 'btn btn-default' %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class='owner_list'>
+  <% @owners.each do |owner| %>
+    <%= link_to owner do %>
+      <div class='list'>
+        <div class='list_body'>
+          <% owner.coordinates.shuffle.first.photos.each do |photo| %>
+            <%= image_tag photo.image.url, class: 'coordinate_image' %>
+          <% end %>
+          <div class='name'>
+            <%= owner.name %>'s corde
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

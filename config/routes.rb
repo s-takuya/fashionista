@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  root 'owners#index'
+  root 'mens#index'
 
   resources :coordinates
-
+  resources :mens
+  resources :women
   resources :owners
   resources :favorites do
     post :remove, on: :collection

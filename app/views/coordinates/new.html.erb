@@ -26,6 +26,11 @@
       <%= person.label :occupation, 'occupation' %>
       <%= person.text_field :occupation, class: 'form-control' %>
     </div>
+
+    <div class='form-group'>
+      Man<%= person.radio_button :man_flag, true %>
+      Woman<%= person.radio_button :woman_flag, true %>
+    </div>
   <% end %>
 
   <div class='form-group'>
