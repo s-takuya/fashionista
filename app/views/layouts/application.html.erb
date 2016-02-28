@@ -13,7 +13,11 @@
   <header>
     <nav class='navbar navbar-custom'>
       <div>
-        <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
+        <% if params[:controller] == 'women' %>
+          <h3 class='logo text-center text-muted'><%= link_to 'Styly', women_path %></h3>
+        <% else %>
+          <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
+        <% end %>
       </div>
 
       <% if params[:controller] == 'women' %>

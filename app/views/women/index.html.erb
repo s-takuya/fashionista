@@ -12,7 +12,7 @@
 
 <div class='owner_list'>
   <% @owners.each do |owner| %>
-    <%= link_to owner do %>
+    <%= link_to woman_path(id: owner.id) do %>
       <div class='list'>
         <div class='list_body'>
           <% owner.coordinates.shuffle.first.photos.each do |photo| %>
