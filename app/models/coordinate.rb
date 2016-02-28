@@ -13,10 +13,10 @@ class Coordinate < ActiveRecord::Base
   end
 
   def previous(owner, id)
-    owner.coordinates.where('id < ?', id).order('id ASC').first
+    owner.coordinates.where('id < ?', id).order('id DESC').first
   end
 
   def next(owner, id)
-    owner.coordinates.where('id > ?', self.id).order('id DESC').first
+    owner.coordinates.where('id > ?', self.id).order('id ASC').first
   end
 end

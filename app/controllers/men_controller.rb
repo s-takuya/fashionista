@@ -5,6 +5,6 @@ class MenController < ApplicationController
 
   def show
     @owner = Owner.find(params[:id])
-    @coordinates = @owner.coordinates.includes(:photos).order(id: :desc)
+    @coordinates = @owner.coordinates.includes(:photos).order(:id)
   end
 end
