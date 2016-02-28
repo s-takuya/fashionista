@@ -16,6 +16,16 @@
         <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
       </div>
 
+      <% if params[:controller] == 'women' %>
+        <div class='man_button text-center'>
+          <%= link_to 'Man', root_path, class: 'btn btn-default' %>
+        </div>
+      <% else %>
+        <div class='woman_button text-center'>
+          <%= link_to 'Woman', women_path, class: 'btn btn-default' %>
+        </div>
+      <% end %>
+
       <% if user_signed_in? %>
         <div class='user_favorites text-center'>
           <%= link_to 'Favorites', favorites_path, class: 'btn btn-default' %>
