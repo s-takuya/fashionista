@@ -1,6 +1,6 @@
 <div class='owner_coordinates'>
   <% @coordinates.each do |coordinate| %>
-    <%= link_to mens_coordinate_path(id: coordinate.id) do %>
+    <%= link_to men_coordinate_path(id: coordinate.id) do %>
       <div class='list'>
         <div class='list_body'>
           <%= image_tag coordinate.photos.first.image.url, class: 'coordinate_image' %>

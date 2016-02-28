@@ -24,7 +24,7 @@
         <div class='man_button text-center'>
           <%= link_to 'Man', root_path, class: 'btn btn-default' %>
         </div>
-      <% elsif params[:controller] == 'mens' || params[:controller] == 'mens_coordinates' %>
+      <% elsif params[:controller] == 'men' || params[:controller] == 'men_coordinates' %>
         <div class='woman_button text-center'>
           <%= link_to 'Woman', women_path, class: 'btn btn-default' %>
         </div>
@@ -35,7 +35,7 @@
           <div class='woman user_favorites text-center'>
             <%= link_to 'Favorites', favorites_path, class: 'btn btn-default' %>
           </div>
-        <% elsif params[:controller] == 'mens' || params[:controller] == 'mens_coordinates' %>
+        <% elsif params[:controller] == 'men' || params[:controller] == 'men_coordinates' %>
           <div class='man user_favorites text-center'>
             <%= link_to 'Favorites', favorites_path, class: 'btn btn-default' %>
           </div>

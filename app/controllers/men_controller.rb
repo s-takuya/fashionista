@@ -1,4 +1,4 @@
-class MensController < ApplicationController
+class MenController < ApplicationController
   def index
     @owners = Owner.man.shuffle
   end

@@ -1,6 +1,6 @@
 class WomenController < ApplicationController
   def index
-    @owners = Owner.woman.shuffle
+    @owners = Owner.includes(:coordinates).woman.shuffle
   end
 
   def show
