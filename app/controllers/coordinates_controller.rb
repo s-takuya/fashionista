@@ -29,7 +29,7 @@ class CoordinatesController < ApplicationController
         @coordinate.update(owner_id: new_owner.id)
       end
       if @coordinate.owner.man_flag == true
-        redirect_to mens_coordinate_path(id: @coordinate.id)
+        redirect_to men_coordinate_path(id: @coordinate.id)
       else
         redirect_to women_coordinate_path(id: @coordinate.id)
       end
