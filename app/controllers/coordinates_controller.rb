@@ -17,8 +17,8 @@ class CoordinatesController < ApplicationController
   def create
     @coordinate = Coordinate.new(coordinate_params)
     if @coordinate.save
-      if Owner.where(name: params[:coordinate][:owner][:name]).present?
-        owner = Owner.where(name: params[:coordinate][:owner][:name]).first
+      if Owner.where("name like '%" + params[:coordinate][:owner][:name] + "%'").present?
+        owner = Owner.where("name like '%" + params[:coordinate][:owner][:name] + "%'").first
         @coordinate.update(owner_id: owner.id)
       else
         if params[:coordinate][:owner][:man_flag].present?
