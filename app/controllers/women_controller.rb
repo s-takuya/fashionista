@@ -5,6 +5,6 @@ class WomenController < ApplicationController
 
   def show
     @owner = Owner.find(params[:id])
-    @coordinates = @owner.coordinates.includes(:photos).shuffle
+    @coordinates = @owner.coordinates.includes(:photos).order(id: :desc)
   end
 end
