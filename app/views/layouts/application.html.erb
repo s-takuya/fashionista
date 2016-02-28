@@ -13,24 +13,24 @@
   <header>
     <nav class='navbar navbar-custom'>
       <div>
-        <% if params[:controller] == 'women' %>
+        <% if params[:controller] == 'women' || params[:controller] == 'women_coordinates' %>
           <h3 class='logo text-center text-muted'><%= link_to 'Styly', women_path %></h3>
         <% else %>
           <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
         <% end %>
       </div>
 
-      <% if params[:controller] == 'women' %>
+      <% if params[:controller] == 'women' || params[:controller] == 'women_coordinates' %>
         <div class='man_button text-center'>
           <%= link_to 'Man', root_path, class: 'btn btn-default' %>
         </div>
-      <% elsif params[:controller] == 'mens' %>
+      <% elsif params[:controller] == 'mens' || params[:controller] == 'mens_coordinates' %>
         <div class='woman_button text-center'>
           <%= link_to 'Woman', women_path, class: 'btn btn-default' %>
         </div>
       <% end %>
 
-      <% if params[:controller] == 'women' || params[:controller] == 'mens' %>
+      <% if params[:controller] == 'women' || params[:controller] == 'mens' || params[:controller] == 'mens_coordinates' || params[:controller] == 'women_coordinates' %>
         <% if user_signed_in? %>
           <div class='user_favorites text-center'>
             <%= link_to 'Favorites', favorites_path, class: 'btn btn-default' %>
