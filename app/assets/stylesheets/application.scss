@@ -35,27 +35,39 @@
    }
  }
 
- .user_favorites {
+ .man.user_favorites {
    margin-top: -45px;
    margin-left: 190px;
    margin-bottom: 12px;
+
    .btn {
      color: #00ab6b;
      border-color: #00ab6b;
      background: #f7f3e8;
    }
  }
-
- .sign_in_link {
+ .woman.user_favorites {
    margin-top: -45px;
-   margin-left: 195px;
+   margin-left: 190px;
    margin-bottom: 12px;
+
    .btn {
      color: #e368d6;
      border-color: #e368d6;
      background: #f7f3e8;
    }
  }
+ 
+.sign_in_link {
+  margin-top: -45px;
+  margin-left: 195px;
+  margin-bottom: 12px;
+  .btn {
+   color: #e368d6;
+   border-color: #e368d6;
+   background: #f7f3e8;
+  }
+}
 
  .logout_link {
    margin-top: -46px;
