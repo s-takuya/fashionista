@@ -14,19 +14,19 @@
     <nav class='navbar navbar-custom'>
       <div>
         <% if params[:controller] == 'women' || params[:controller] == 'women_coordinates' %>
-          <h3 class='logo text-center text-muted'><%= link_to 'Styly', women_path %></h3>
-        <% else %>
           <h3 class='logo text-center text-muted'><%= link_to 'Styly', root_path %></h3>
+        <% else %>
+          <h3 class='logo text-center text-muted'><%= link_to 'Styly', men_path %></h3>
         <% end %>
       </div>
 
       <% if params[:controller] == 'women' || params[:controller] == 'women_coordinates' %>
         <div class='man_button text-center'>
-          <%= link_to 'Man', root_path, class: 'btn btn-default' %>
+          <%= link_to 'Man', men_path, class: 'btn btn-default' %>
         </div>
       <% elsif params[:controller] == 'men' || params[:controller] == 'men_coordinates' %>
         <div class='woman_button text-center'>
-          <%= link_to 'Woman', women_path, class: 'btn btn-default' %>
+          <%= link_to 'Woman', root_path, class: 'btn btn-default' %>
         </div>
       <% end %>
 
