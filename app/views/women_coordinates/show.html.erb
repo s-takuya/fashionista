@@ -2,7 +2,7 @@
   <div class='previous_next'>
     <% if @coordinate.previous(@coordinate.owner, @coordinate.id).present? %>
       <div class='previous text-center'>
-        <%= link_to men_coordinate_path(id: @coordinate.previous(@coordinate.owner, @coordinate.id).id) do %>
+        <%= link_to women_coordinate_path(id: @coordinate.previous(@coordinate.owner, @coordinate.id).id) do %>
           <i class="fa fa-angle-double-left fa-2x"></i>
         <% end %>
       </div>
@@ -10,13 +10,13 @@
 
     <% if @coordinate.next(@coordinate.owner, @coordinate.id).present? %>
       <div class='next text-center'>
-        <%= link_to men_coordinate_path(id: @coordinate.next(@coordinate.owner, @coordinate.id).id) do %>
+        <%= link_to women_coordinate_path(id: @coordinate.next(@coordinate.owner, @coordinate.id).id) do %>
           <i class="fa fa-angle-double-right fa-2x"></i>
         <% end %>
       </div>
     <% end %>
   </div>
-  
+
   <div class='person_name text-center'>
     <%= @coordinate.owner.name %>
   </div>
