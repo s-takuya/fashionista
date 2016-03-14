@@ -17,6 +17,6 @@ class Coordinate < ActiveRecord::Base
   end
 
   def next(owner, id)
-    owner.coordinates.where('id > ?', self.id).order('id ASC').first
+    owner.coordinates.where('id > ?', id).order('id ASC').first
   end
 end
