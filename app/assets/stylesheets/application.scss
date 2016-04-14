@@ -41,6 +41,7 @@
      .gallery_img_list {
        .gallery_img {
          width: 100%;
+         max-height: 85%;
          overflow: hidden;
        }
      }
@@ -92,7 +93,7 @@
    .btn {
      color: #00ab6b;
      border-color: #00ab6b;
-     background: #f7f3e8;
+     background: #f5f5f5;
    }
  }
  .woman.user_favorites {
@@ -103,7 +104,7 @@
    .btn {
      color: #e368d6;
      border-color: #e368d6;
-     background: #f7f3e8;
+     background: #f5f5f5;
    }
  }
 
@@ -114,7 +115,7 @@
   .btn {
    color: #e368d6;
    border-color: #e368d6;
-   background: #f7f3e8;
+   background: #f5f5f5;
   }
 }
 
@@ -125,7 +126,7 @@
    .btn {
      color: #00ab6b;
      border-color: #00ab6b;
-     background: #f7f3e8;
+     background: #f5f5f5;
    }
  }
 
@@ -146,7 +147,7 @@
    .btn {
      color: #02b875;
      border-color: #02b875;
-     background: #f7f3e8;
+     background: #f5f5f5;
    }
  }
 
@@ -154,7 +155,7 @@
    border-radius: 999em;
    border-color: #696969;
    color: #696969;
-   background: #f7f3e8;
+   background: #f5f5f5;
  }
 
  a {
