@@ -1,16 +1,14 @@
 <% if @coordinates.present? %>
   <ul class='gallery_box'>
     <% @coordinates.each do |coordinate| %>
-      <%= link_to coordinate do %>
-        <li class='gallery_list'>
-          <div class='gallery_img_list'>
-            <%= image_tag coordinate.photos.last.image.url, class: 'gallery_img' %>
-          </div>
-        </li>
-        <div class='gallery_bottom_info'>
-          <span class='model_name'><%= coordinate.owner.name %></span>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag coordinate.photos.last.image.url, class: 'gallery_img' %>
         </div>
-      <% end %>
+      </li>
+      <div class='gallery_bottom_info'>
+        <span class='model_name'><%= coordinate.owner.name %></span>
+      </div>
     <% end %>
   </ul>
 <% else %>
