@@ -15,19 +15,18 @@
   <% end %>
 <% end %>
 
-<div class='owner_list'>
+<ul class='gallery_box'>
   <% @owners.each do |owner| %>
     <%= link_to woman_path(id: owner.id) do %>
-      <div class='list'>
-        <div class='list_body'>
-          <% owner.coordinates.shuffle.first.photos.each do |photo| %>
-            <%= image_tag photo.image.url, class: 'coordinate_image' %>
-          <% end %>
-          <div class='name'>
-            <%= owner.name %>'s corde
-          </div>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag owner.coordinates.last.photos.last.image.url, class: 'gallery_img' %>
         </div>
+      </li>
+      <div class='gallery_bottom_info'>
+        <span class='model_name'><%= owner.name %></span>
+        <span class='occupation'><%= owner.occupation %></span>
       </div>
     <% end %>
   <% end %>
-</div>
+</ul>

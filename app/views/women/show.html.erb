@@ -1,14 +1,13 @@
-<div class='owner_coordinates'>
+<ul class='gallery_box'>
   <% @coordinates.each do |coordinate| %>
     <%= link_to women_coordinate_path(id: coordinate.id) do %>
-      <div class='list'>
-        <div class='list_body'>
-          <%= image_tag coordinate.photos.first.image.url, class: 'coordinate_image' %>
-          <div class='season'>
-            dress_season: <%= coordinate.dress_season %>
-          </div>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
         </div>
+      </li>
+      <div class='gallery_bottom_info'>
       </div>
     <% end %>
   <% end %>
-</div>
+</ul>
