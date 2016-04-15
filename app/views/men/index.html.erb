@@ -17,12 +17,12 @@
 
 <ul class='gallery_box'>
   <% @owners.each do |owner| %>
-    <li class='gallery_list'>
-      <div class='gallery_img_list'>
-        <%= image_tag owner.coordinates.last.photos.last.image.url, class: 'gallery_img' %>
-      </div>
-    </li>
     <%= link_to man_path(id: owner.id) do %>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag owner.coordinates.last.photos.last.image.url, class: 'gallery_img' %>
+        </div>
+      </li>
       <div class='gallery_bottom_info'>
         <span class='model_name'><%= owner.name %></span>
         <span class='occupation'><%= owner.occupation %></span>

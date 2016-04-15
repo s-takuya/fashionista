@@ -7,22 +7,14 @@
   <% end %>
 </header>
 
-<div class='coordinates_list'>
+<ul class='gallery_box'>
   <% @coordinates.each do |coordinate| %>
-    <%= link_to women_coordinate_path(id: coordinate.id) do %>
-      <div class='list'>
-        <div class='list_body'>
-          <% coordinate.photos.each do |photo| %>
-            <%= image_tag photo.image.url, class: 'coordinate_image' %>
-          <% end %>
-          <div class='name'>
-            <%= coordinate.owner.name %>
-          </div>
-          <div class='season'>
-            dress_season: <%= coordinate.dress_season %>
-          </div>
-        </div>
+    <li class='gallery_list'>
+      <div class='gallery_img_list'>
+        <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
       </div>
-    <% end %>
+    </li>
+    <div class='gallery_bottom_info'>
+    </div>
   <% end %>
-</div>
+</ul>
