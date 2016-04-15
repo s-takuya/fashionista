@@ -2,7 +2,7 @@
   <% @coordinates.each do |coordinate| %>
     <li class='gallery_list'>
       <div class='gallery_img_list'>
-        <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
+        <%= image_tag coordinate.photos.first.image.url(:medium), class: 'gallery_img' %>
       </div>
     </li>
     <div class='gallery_bottom_info'>

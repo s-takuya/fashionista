@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
 
   # TODO: use dynamic configuration
   # see https://github.com/thoughtbot/paperclip#dynamic-configuration
-  has_attached_file :image
+  has_attached_file :image, styles: { medium: '270x350>' }
   validates_attachment_presence :image
   validates_attachment_content_type :image, content_type: %r{\Aimage\/.*\Z}
 end
