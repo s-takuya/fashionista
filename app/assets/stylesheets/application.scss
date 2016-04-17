@@ -176,3 +176,41 @@ h3 {
    margin-bottom: 30px;
    margin-left: 5px;
  }
+
+ .pc_gallery_box {
+   margin-top: 150px;
+   list-style: none;
+   margin-bottom: 150px;
+
+   li {
+     width: 25%;
+     float: left;
+     padding: 0;
+     border: 0;
+     display: list-item;
+     margin-bottom: 100px;
+
+     .gallery_img {
+       height: 235px;
+       width: 235px;
+       border-radius: 3px;
+     }
+
+     .gallery_bottom_info {
+       padding-top: 5px;
+       padding-bottom: 15px;
+       color: #565a5c;
+       position: relative;
+
+       .model_name {
+         font-size: 24px;
+         margin-left: 5px;
+       }
+
+       .occupation {
+         font-size: 20px;
+         margin-left: 7px;
+       }
+     }
+   }
+ }

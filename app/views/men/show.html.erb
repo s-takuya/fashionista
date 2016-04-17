@@ -1,11 +1,23 @@
-<ul class='gallery_box'>
-  <% @coordinates.each do |coordinate| %>
-    <li class='gallery_list'>
-      <div class='gallery_img_list'>
-        <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
+<% if request.from_smartphone? %>
+  <ul class='gallery_box'>
+    <% @coordinates.each do |coordinate| %>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
+        </div>
+      </li>
+      <div class='gallery_bottom_info'>
       </div>
-    </li>
-    <div class='gallery_bottom_info'>
-    </div>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% else %>
+  <ul class='pc_gallery_box'>
+    <% @coordinates.each do |coordinate| %>
+      <li class='gallery_list'>
+        <div class='gallery_img_list'>
+          <%= image_tag coordinate.photos.first.image.url, class: 'gallery_img' %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -20,6 +20,7 @@ source 'https://rubygems.org' do
   gem 'omniauth-facebook',  '3.0.0'
   gem 'paperclip',          '4.2.1'
   gem 'pg',                 '0.18.1'
+  gem 'rack-user_agent',    '0.4.2'
   gem 'rails',              '4.2.1'
   gem 'rails_admin',        '0.7.0'
   gem 'ransack',            '1.6.6'
